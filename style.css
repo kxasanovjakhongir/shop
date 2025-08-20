@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.product-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    overflow: hidden;
+}
+
+.product-details {
+    padding: 50px;
+    flex: 1;
+}
+
+.product-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px;
+}
+
+.product-code {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.product-price {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #e63946;
+    margin: 0 0 40px;
+}
+
+.product-price::before {
+    content: '$';
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: relative;
+    top: -15px;
+    right: 5px;
+}
+
+.product-option {
+    margin-bottom: 30px;
+}
+
+.option-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.color-options, .size-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.color-box:hover, .color-box.active {
+    border-color: #333;
+    transform: scale(1.1);
+}
+
+.size-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.size-box:hover, .size-box.active {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #d02d3a;
+    transform: translateY(-2px);
+}
+
+.product-image {
+    flex: 1;
+    background-color: #f1f1f1; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    transform: scale(1.2);
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
+}
